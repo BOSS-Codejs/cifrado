@@ -4,6 +4,7 @@ import "./Doc.css";
 const Extra = () => {
   return (
     <div className="table-container">
+      <h2 style={{textAlign:'center',top:'10px',marginBottom:'10px'}}>Diferencia de los método de cifrado</h2>
       <table className="comparison-table">
         <thead>
           <tr>
