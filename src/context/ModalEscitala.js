@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Modal, Box, Typography, Button } from "@mui/material";
+import { useNavigation } from "react-router-dom";
 import Helpimg from "./img/help.png";
 import './Modal.css'
 
 const EscitalaCipherModal = () => {
   const [open, setOpen] = useState(false);
-
+  const navigate = useNavigation();
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -22,6 +23,11 @@ const EscitalaCipherModal = () => {
     p: 4,
     borderRadius: "10px",
   };
+
+  const goToDocument = ()=>
+  {
+    navigate('/Document'); 
+  }
 
   return (
     <div>
@@ -77,7 +83,7 @@ const EscitalaCipherModal = () => {
               Cerrar
             </Button>
             <Button
-              onClick={handleClose}
+              onClick={goToDocument}
               variant="outlined"
               sx={{
                 mt: 2,
