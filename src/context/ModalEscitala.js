@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Modal, Box, Typography, Button } from "@mui/material";
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Helpimg from "./img/help.png";
 import './Modal.css'
 
 const EscitalaCipherModal = () => {
   const [open, setOpen] = useState(false);
-  const navigate = useNavigation();
+  const navigate = useNavigate();
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
