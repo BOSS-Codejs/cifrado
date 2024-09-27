@@ -70,43 +70,39 @@
   
 
 /*Estolo de tabla*/
-/* Estilos básicos */
-
-.tex{
-  text-align: center;
-}
-
-/* Contenedor de la tabla */
+/* Estilos generales */
 .table-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
 }
 
-/* Estilos de la tabla */
 .comparison-table {
   width: 100%;
-  max-width: 800px;
   border-collapse: collapse;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  font-family: Arial, sans-serif;
 }
 
-/* Estilos de las celdas */
+/* Estilos para las celdas */
 .comparison-table th, .comparison-table td {
-  padding: 12px;
-  text-align: center;
   border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
+/* Estilos para las cabeceras */
 .comparison-table th {
-  background-color: #007bff;
+  background-color: #4CAF50;
   color: white;
 }
 
-/* Estilos responsivos */
-@media (max-width: 600px) {
-  .comparison-table, .comparison-table thead, .comparison-table tbody, .comparison-table th, .comparison-table td, .comparison-table tr {
+/* Responsivo: se apilan las filas en pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td {
     display: block;
     width: 100%;
   }
@@ -124,10 +120,10 @@
   .comparison-table td::before {
     content: attr(data-label);
     position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 10px;
-    font-weight: bold;
+    left: 10px;
+    width: calc(50% - 20px);
     text-align: left;
+    font-weight: bold;
   }
 }
+
