@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Helpimg from "./img/help.png";
-import './Modal.css'
+import "./Modal.css";
 
 const EscitalaCipherModal = () => {
   const [open, setOpen] = useState(false);
@@ -16,18 +16,18 @@ const EscitalaCipherModal = () => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "80%",
-    maxWidth: "500px",
+    width: "90%",
+    maxWidth: "400px",
     bgcolor: "background.paper",
+    
     boxShadow: 24,
     p: 4,
     borderRadius: "10px",
   };
 
-  const goToDocument = ()=>
-  {
-    navigate('/Document'); 
-  }
+  const goToDocument = () => {
+    navigate("/Document");
+  };
 
   return (
     <div>
@@ -44,37 +44,35 @@ const EscitalaCipherModal = () => {
       >
         <Box sx={modalStyle}>
           <Typography id="modal-title" variant="h6" component="h2" gutterBottom>
-            Método de Encriptación Escítala
+            Cifrado Escítala
           </Typography>
-          <Typography id="modal-description" sx={{ mt: 2 }}>
+          <Typography id="modal-description" sx={{ mt: 1 }}>
             El método de la escítala es uno de los primeros sistemas de cifrado
-            utilizados por los antiguos espartanos. Consiste en un mecanismo
-            simple de transposición de letras, donde se utiliza un cilindro
-            llamado escítala. 
-          </Typography>
-          <Typography id="modal-description" sx={{ mt: 2 }}>
-            Supongamos que el mensaje original es "SALVAME". Si usamos una
-            escítala con un diámetro que obliga a escribir en 3 columnas, el
-            mensaje se escribe de la siguiente forma:
+            que consiste en un mecanismo simple de transposición de letras,
+            donde se utiliza un cilindro llamado escítala.
           </Typography>
           <Typography id="modal-description" sx={{ mt: 1 }}>
-            S A L
+            Ejemplo: la palabra SALVAME con la clave 3 codificado SVEAALM El
+            mensaje codificado sería: SALVAME
           </Typography>
-          <Typography id="modal-description" sx={{ mt: 1 }}>
-            V A M
+          <Typography className="Guia" id="modal-description" sx={{ mt: 1 }}>
+            <h4 style={{ textAlign: "center" }}>
+              Pasos para Cifrar o Descifrar un Mensaje
+            </h4>
+            <ol style={{ marginLeft: "11px" }}>
+              <li>Selecciona el método con el switch en rojo.</li>
+              <li>Ingresa el mensaje a cifrar o descifrar.</li>
+              <li>Introduce la clave de desplazamiento.</li>
+              <li>Presiona "Cifrar" o "Descifrar".</li>
+              <li>Puedes copiar el resultado con el botón "Copiar Texto".</li>
+            </ol>
           </Typography>
-          <Typography id="modal-description" sx={{ mt: 1 }}>
-            E
-          </Typography>
-          <Typography id="modal-description" sx={{ mt: 2 }}>
-            Al desenrollar, el mensaje codificado sería: SALVAME
-          </Typography>
-          <Box sx={{ display:'flex', mt: 3 }}>
+          <Box sx={{ display: "flex", mt: 1 }}>
             <Button
               onClick={handleClose}
               variant="outlined"
               sx={{
-                mt: 2,
+                mt: 1,
                 display: "block",
                 marginLeft: "auto",
                 marginRight: "auto",
@@ -86,7 +84,7 @@ const EscitalaCipherModal = () => {
               onClick={goToDocument}
               variant="outlined"
               sx={{
-                mt: 2,
+                mt: 1,
                 display: "block",
                 marginLeft: "auto",
                 marginRight: "auto",

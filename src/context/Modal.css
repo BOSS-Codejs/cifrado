@@ -1,5 +1,17 @@
 @media (max-width: 768px) {
     .modal-title{
-        font-size: 15px;      
+        font-size: 10px;      
+    }
+    .texto{
+        font-size: 10px;   
+    }
+    .Guia{
+        padding: 3px;
     }
 }
+
+
+
+
+
+

@@ -10,7 +10,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "90%",
-  maxWidth: 400,
+  maxWidth: 500,
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 4,
@@ -39,6 +39,7 @@ const CesarCipherModal = () => {
         onClose={handleClose}
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
+        className="modal"
       >
         <Box sx={style}>
           <Typography
@@ -52,36 +53,39 @@ const CesarCipherModal = () => {
           </Typography>
           <Typography
             id="modal-description"
-            sx={{ mt: 2, textAlign: "justify" }}
+            sx={{ mt: 1, textAlign: "justify" }}
+            
           >
             El método de cifrado César es un cifrado por sustitución simple, en
-            el cual cada letra del texto original (texto plano) es reemplazada
-            por otra letra que se encuentra un número fijo de posiciones más
-            adelante en el alfabeto.
+            el cual cada letra del texto original es reemplazada
+            por otra letra de posiciones más adelante en el alfabeto.
           </Typography>
           <Typography
             id="modal-description"
-            sx={{ mt: 2, textAlign: "justify" }}
+            sx={{ mt: 1, textAlign: "justify" }}
           >
             Este número fijo se conoce como el desplazamiento o clave. si el
             desplazamiento es 3, la letra "A" se reemplaza por "D", la letra "B"
             por "E", y así sucesivamente.
           </Typography>
-          <Typography
-            id="modal-description"
-            sx={{ mt: 2, textAlign: "justify" }}
-          >
-            Al llegar al final del alfabeto, el conteo continúa desde el
-            principio. Si tenemos el texto "HOLA" y aplicamos un desplazamiento
-            de 3, el resultado sería: H - K O - R L - O A - D Por lo tanto, el
-            texto cifrado sería "KROD".
+          <Typography className="Guia" id="modal-description" sx={{ mt: 2 }}>
+            <h4 style={{ textAlign: "center" }}>
+              Pasos para Cifrar o Descifrar un Mensaje
+            </h4>
+            <ol style={{ marginLeft: "11px" }}>
+              <li>Selecciona el método con el switch en azul.</li>
+              <li>Ingresa el mensaje a cifrar o descifrar.</li>
+              <li>Introduce la clave de desplazamiento.</li>
+              <li>Presiona "Cifrar" o "Descifrar".</li>
+              <li>Puedes copiar el resultado con el botón "Copiar Texto".</li>
+            </ol>
           </Typography>
-          <Box sx={{ display: "flex", mt: 3 }}>
+          <Box sx={{ display: "flex", mt: 1 }}>
             <Button
               onClick={handleClose}
               variant="outlined"
               sx={{
-                mt: 2,
+                mt: 1,
                 display: "block",
                 marginLeft: "auto",
                 marginRight: "auto",
@@ -93,7 +97,7 @@ const CesarCipherModal = () => {
               onClick={goToDocument}
               variant="outlined"
               sx={{
-                mt: 2,
+                mt: 1,
                 display: "block",
                 marginLeft: "auto",
                 marginRight: "auto",

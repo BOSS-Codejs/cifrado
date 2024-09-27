@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <footer className="footer">
         <div className="footer-container">
-          {/* Sección de redes sociales */}
+          {/* Sección de redes sociales
           <div className="footer-section social-media">
             <h4>Síguenos</h4>
             <ul>
@@ -20,6 +20,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          */}
 
           {/* Sección de descripción */}
           <div className="footer-section description">
