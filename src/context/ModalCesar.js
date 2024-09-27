@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Box, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import Helpimg from "./img/help.png";
 
 // Estilos para el modal
@@ -18,9 +19,13 @@ const style = {
 
 const CesarCipherModal = () => {
   const [open, setOpen] = useState(false);
-
+  const navigate = useNavigate();
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const goToDocument = () => {
+    navigate("/Document");
+  };
 
   return (
     <div>
@@ -85,7 +90,7 @@ const CesarCipherModal = () => {
               Cerrar
             </Button>
             <Button
-              onClick={handleClose}
+              onClick={goToDocument}
               variant="outlined"
               sx={{
                 mt: 2,
